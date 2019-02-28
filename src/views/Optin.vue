@@ -14,14 +14,22 @@
         />
       </b-col>
     </b-row>
-    <b-row>
+    <b-row style="marginTop:20px">
       <b-col>
-        put image here
+        <b-img
+          src="https://images.unsplash.com/photo-1483032469466-b937c425697b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=80"
+          fluid
+        />
       </b-col>
       <b-col>
         <TextContent
           variant="paragraph"
           content="Here’s where you write your compelling message, keep your sentences and paragraphs short."
+        />
+        <OptinForm
+          submitText="Free Download!"
+          submitColor="warning"
+          @submit="handleSubmit"
         />
       </b-col>
     </b-row>
@@ -29,12 +37,20 @@
 </template>
 
 <script>
-import TextContent from "../components/TextComponent";
+import TextContent from "../components/TextContent";
+import OptinForm from "../components/OptinForm";
 
 export default {
   name: "optin",
   components: {
-    TextContent
+    TextContent,
+    OptinForm
+  },
+  methods: {
+    handleSubmit(form) {
+      console.log("Add New Subscriber", form.email);
+      this.$router.push({ path: "/thank-you" });
+    }
   }
 };
 </script>
