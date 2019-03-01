@@ -42,7 +42,7 @@
         <CountdownTimer endDate="March 3, 2020" />
         <TextContent
           variant="subheader"
-          content="This is offer will soon expire"
+          content="This offer will soon expire"
         />
       </b-col>
     </b-row>
