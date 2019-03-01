@@ -11,7 +11,8 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.13",
     "vue": "^2.6.7",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuejs-countdown": "^0.2.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",

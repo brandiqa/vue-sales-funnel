@@ -26,10 +26,23 @@
           variant="paragraph"
           content="Here’s where you write your compelling message, keep your sentences and paragraphs short."
         />
+        <TextContent
+          variant="paragraph"
+          content="Use <strong>*bold*</strong>, <u>underline</u> and <i>italics</i> to emphasize important points."
+        />
         <OptinForm
           submitText="Free Download!"
           submitColor="warning"
           @submit="handleSubmit"
+        />
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <CountdownTimer endDate="March 3, 2020" />
+        <TextContent
+          variant="subheader"
+          content="This is offer will soon expire"
         />
       </b-col>
     </b-row>
@@ -39,12 +52,14 @@
 <script>
 import TextContent from "../components/TextContent";
 import OptinForm from "../components/OptinForm";
+import CountdownTimer from "../components/CountdownTimer";
 
 export default {
   name: "optin",
   components: {
     TextContent,
-    OptinForm
+    OptinForm,
+    CountdownTimer
   },
   methods: {
     handleSubmit(form) {
